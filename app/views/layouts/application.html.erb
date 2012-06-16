@@ -7,9 +7,6 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-
-    <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-         More info: h5bp.com/i/378 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title>RailStrap v 0.1</title>
@@ -17,8 +14,6 @@
 
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
     <meta name="viewport" content="width=device-width">
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
     <%= stylesheet_link_tag '__main.css' %>
     <%= stylesheet_link_tag '_bootstrap.min.css' %>
@@ -30,22 +25,12 @@
         padding-bottom: 40px;
       }
     </style>
-
-    <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-
-    <!-- All JavaScript at the bottom, except this Modernizr build.
-         Modernizr enables HTML5 elements & feature detects for optimal performance.
-         Create your own custom Modernizr build: www.modernizr.com/download/ -->
     <%= javascript_include_tag 'modernizr-2.5.3.min.js' %>
 
     <%= csrf_meta_tag %>
 </head>
 <body>
-    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-         chromium.org/developers/how-tos/chrome-frame-getting-started -->
     <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-
-    <!-- Add your site or application content here -->
 
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
@@ -55,7 +40,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
+
           <%= link_to "RailStrap", root_path, :class => 'brand' %>
+
           <div class="nav-collapse">
             <ul class="nav">
                <% if current_user %>
@@ -79,9 +66,7 @@
           </div>
         <% end %>              
       </div>
-
       
-
       <%= yield %>
 
       <hr>
@@ -112,23 +97,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
