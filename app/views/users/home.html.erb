@@ -1,0 +1,62 @@
+<div class="row">
+	<div class="hero-unit">
+		<div class="row-fluid">
+			<div class="span8">
+
+			<% if current_user %>
+				<h3>Hello <%= current_user.email %></h3>
+				<%= link_to "Log out", log_out_path %>
+			<% else %>
+				<h1> RailStrap v 0.1 </h1>
+			<% end %>
+			<hr>
+			<h3>Features</h3>
+			<ul>
+				<li>
+					<strong>Front-end</strong>
+					<ul>
+						<li> <i class="icon-ok"></i> <a href="http://html5boilerplate.com/" target="_blank">HTML5 Boilerplate</a> </li>
+						<li> <i class="icon-ok"></i> <a href="http://twitter.github.com/bootstrap/" target="_blank"> Twitter Bootsrap 2.0</a> </li>
+					</ul>
+				</li>
+				<li>
+					<strong>Back-end</strong>
+					<ul>
+						<li> <i class="icon-ok"></i> <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a> 3.0.3</li>
+						<li> <i class="icon-ok"></i> Authentication System</li>
+					</ul>
+				</li>
+
+			</ul>
+
+			</div>
+			<div class="span4">
+				<% unless current_user %>
+					<div class="tabbable">
+					  <ul class="nav nav-tabs">
+					    <li class="active"><a href="#tab1" data-toggle="tab">Log in</a></li>
+					    <li><a href="#tab2" data-toggle="tab">Sign up</a></li>
+					  </ul>
+					  <div class="tab-content">
+					    <div class="tab-pane active" id="tab1">
+					      <%= render "sessions/form" %>
+					    </div>
+					    <div class="tab-pane" id="tab2">
+					      <%= render :partial => "form", :locals => { :user => @user } %>
+					    </div>
+					  </div>
+					</div>
+				<% else %>
+
+					<h3><%= link_to "Log out", log_out_path %></h3>
+
+				<% end %>
+				
+			</div>		
+
+		</div>
+
+		
+		
+	</div>
+</div>

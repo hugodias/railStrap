@@ -1,0 +1,23 @@
+<%= form_for user, :html => {:class => "form-horizontal"} do |f| %>
+  <legend>Sign Up</legend>
+  <% if user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.text_field :email, :placeholder => 'Email' %>
+  </p>
+  <p>
+    <%= f.password_field :password, :placeholder => 'Password' %>
+  </p>
+  <p>
+    <%= f.password_field :password_confirmation, :placeholder => 'Password confirm' %>
+  </p>
+  <p class="button"><%= f.submit :class => 'btn', :value => 'Register' %></p>
+<% end %>
