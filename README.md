@@ -77,6 +77,23 @@ Thanks [pringles](http://news.ycombinator.com/user?id=pringles) for the tip
 
 
 
+#### Databases
+---
+The branch **master** uses SQLITE by default. You can choose another database by changing branches. Rail Strap currently supports:
+
+* [SQLITE](https://github.com/hugodias/railStrap)
+* [MYSQL](https://github.com/hugodias/railStrap/tree/mysqldb)
+
+---
+
+
+#### Todo
+---
+
+* Include supports for redis and mongodb
+* Create a feature to remind the user password
+* Significantly reduce the amount of files from the repository, to be an extension of application and not the entire application.
+
 ## License
 
 ### Major components:
