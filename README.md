@@ -73,9 +73,6 @@ RailStrap::Application.config.secret_token = 'YOUR-NEW-TOKEN-HERE'
 
 Thanks [pringles](http://news.ycombinator.com/user?id=pringles) for the tip
 
----
-
-
 
 #### Databases
 ---
@@ -83,8 +80,6 @@ The branch **master** uses SQLITE by default. You can choose another database by
 
 * [SQLITE](https://github.com/hugodias/railStrap)
 * [MYSQL](https://github.com/hugodias/railStrap/tree/mysqldb)
-
----
 
 
 #### Todo
