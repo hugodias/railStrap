@@ -1,7 +1,6 @@
 <%= form_for user, :html => {:class => "form-horizontal"} do |f| %>
-  <legend>Sign Up</legend>
   <% if user.errors.any? %>
-    <div class="error_messages">
+    <div class="alert alert-error">
       <h2>Form is invalid</h2>
       <ul>
         <% for message in user.errors.full_messages %>
@@ -19,5 +18,5 @@
   <p>
     <%= f.password_field :password_confirmation, :placeholder => 'Password confirm' %>
   </p>
-  <p class="button"><%= f.submit :class => 'btn', :value => 'Register' %></p>
+  <p class="button"><%= f.submit :class => 'btn btn-success', :value => 'Register' %></p>
 <% end %>
