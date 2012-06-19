@@ -5,11 +5,13 @@
 
 			<% if current_user %>
 				<h3>Hello <%= current_user.email %></h3>
-				<%= link_to "Log out", log_out_path %>
 			<% else %>
 				<h1> RailStrap v 0.1 </h1>
 			<% end %>
 			<hr>
+			<% if current_user %>
+				<h4><%= link_to "Manage users", users_path %></h4>
+			<% else %>
 			<h3>Features</h3>
 			<ul>
 				<li>
@@ -26,9 +28,8 @@
 						<li> <i class="icon-ok"></i> Authentication System</li>
 					</ul>
 				</li>
-
 			</ul>
-
+			<% end %>
 			</div>
 			<div class="span4">
 				<% unless current_user %>
@@ -46,10 +47,6 @@
 					    </div>
 					  </div>
 					</div>
-				<% else %>
-
-					<h3><%= link_to "Log out", log_out_path %></h3>
-
 				<% end %>
 				
 			</div>		

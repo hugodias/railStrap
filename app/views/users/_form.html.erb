@@ -1,9 +1,9 @@
-<%= form_for user, :html => {:class => "form-horizontal"} do |f| %>
-  <% if user.errors.any? %>
+<%= form_for @user, :html => {:class => "form-horizontal"} do |f| %>
+  <% if @user.errors.any? %>
     <div class="alert alert-error">
       <h2>Form is invalid</h2>
       <ul>
-        <% for message in user.errors.full_messages %>
+        <% for message in @user.errors.full_messages %>
           <li><%= message %></li>
         <% end %>
       </ul>
