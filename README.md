@@ -6,6 +6,16 @@ RailStrap is a Front-end / Back-end template using HTML5 Boilerplate, Twitter Bo
 
 Clone the git repo - `git clone https://github.com/hugodias/railStrap.git` - or [download it](https://github.com/hugodias/railStrap/zipball/master)
 
+Go to your railStrap folder and run
+<pre>
+sudo bundle install && sudo bundle update
+</pre>
+
+Create your database
+<pre>
+rake db:create
+</pre>
+
 Execute rake to create the users database
 <pre>
 rake db:migrate
