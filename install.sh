@@ -5,7 +5,7 @@ echo '-- Press some key to continue --'
 read key
 
 echo 'Type your root password to procede (We will just update your bundle)'
-sudo bundle install
+bundle install
 
 echo '... Creating your database ...'
 rake db:create
