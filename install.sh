@@ -9,7 +9,7 @@ sudo bundle install && sudo bundle update
 
 echo '... Creating your database ...'
 rake db:create
-rake db:micrate
+rake db:migrate
 
 echo '... Database created. Starting server ... '
 rails s
