@@ -17,3 +17,4 @@
 Gemfile.lock
 railstrap_development
 railstrap_test
+.DS_Store
