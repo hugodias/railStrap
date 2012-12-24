@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>RailStrap v 0.1</title>
+    <title><%= RailStrap::Application.config.application_name %></title>
     <meta name="description" content="">
 
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
@@ -41,7 +41,7 @@
             <span class="icon-bar"></span>
           </a>
 
-          <%= link_to "RailStrap", root_path, :class => 'brand' %>
+          <%= link_to RailStrap::Application.config.application_name, root_path, :class => 'brand' %>
 
           <div class="nav-collapse">
             <ul class="nav">
@@ -81,7 +81,7 @@
       <hr>
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p><%= RailStrap::Application.config.application_name %> &copy; Company 2012</p>
       </footer>
 
     </div> <!-- /container -->

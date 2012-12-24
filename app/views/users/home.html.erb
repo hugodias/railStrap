@@ -6,7 +6,7 @@
 			<% if current_user %>
 				<h3>Hello <%= current_user.email %></h3>
 			<% else %>
-				<h1> RailStrap v 0.1 </h1>
+				<h1> <%= RailStrap::Application.config.application_name %> </h1>
 			<% end %>
 			<hr>
 			<% if current_user %>
@@ -18,7 +18,7 @@
 					<strong>Front-end</strong>
 					<ul>
 						<li> <i class="icon-ok"></i> <a href="http://html5boilerplate.com/" target="_blank">HTML5 Boilerplate</a> </li>
-						<li> <i class="icon-ok"></i> <a href="http://twitter.github.com/bootstrap/" target="_blank"> Twitter Bootsrap 2.0</a> </li>
+						<li> <i class="icon-ok"></i> <a href="http://twitter.github.com/bootstrap/" target="_blank"> Twitter Bootsrap 2.2</a> </li>
 					</ul>
 				</li>
 				<li>
