@@ -15,3 +15,5 @@
 /tmp
 
 Gemfile.lock
+railstrap_development
+railstrap_test
