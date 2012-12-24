@@ -6,30 +6,9 @@ RailStrap is a Front-end / Back-end template using HTML5 Boilerplate, Twitter Bo
 
 Clone the git repo - `git clone https://github.com/hugodias/railStrap.git` - or [download it](https://github.com/hugodias/railStrap/zipball/master)
 
-Go to your railStrap folder and run
+Go to your railStrap folder and run install
 <pre>
-sudo bundle install && sudo bundle update
-</pre>
-
-Create your database
-<pre>
-rake db:create
-</pre>
-
-Execute rake to create the users database
-<pre>
-rake db:migrate
-</pre>
-
-if you are having getting the following error:
-`You have already activated rake 0.9.2.2, but your Gemfile requires rake 0.8.7. Using bundle exec may solve this.` try this
-<pre>
-bundle exec rake db:migrate
-</pre>
-
-Now start the server in your railStrap folder
-<pre>
-rails s
+sh install.sh
 </pre>
 
 Check at [http://localhost:3000](http://localhost:3000)
