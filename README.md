@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/hugodias/railStrap.png?branch=master)](https://travis-ci.org/hugodias/railStrap)
+[![Build Status](https://api.travis-ci.org/hugodias/railStrap.png)](https://travis-ci.org/hugodias/railStrap)
 
 # RailStrap
 
