@@ -10,7 +10,9 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email
   
   def self.authenticate(email, password)
-    user = find_by_email(email)
+      
+    user = User.is_a_valid_email(email) ? find_by_email(email) : find_by_username(email)
+
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
       user
     else
@@ -18,6 +20,22 @@ class User < ActiveRecord::Base
     end
   end
   
+
+  def self.is_a_valid_email(email)
+    # Check the number of '@' signs.
+    if email.count("@") != 1 then
+      return false
+
+    # We can now check the email using a simple regex.
+    # You can replace the TLD's at the end with the TLD's you wish
+    # to accept.
+    elsif email =~ /^.*@.*(.com|.org|.net)$/ then
+      return true
+    else
+      return false
+    end
+  end
+
   def encrypt_password
     if password.present?
       self.password_salt = BCrypt::Engine.generate_salt
