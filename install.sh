@@ -4,7 +4,7 @@ echo
 echo '-- Press some key to continue --'
 read key
 
-echo 'Type your root password to procede (We will just update your bundle)'
+echo '... Updating your bundle ...'
 bundle install
 
 echo '... Creating your database ...'
