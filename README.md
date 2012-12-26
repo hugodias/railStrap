@@ -17,33 +17,13 @@ You can try loggin in with `administrator@railstrap.com / 123123`
 
 ## Features
 
-#### [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/)
-* HTML5 ready. Use the new elements with confidence.
-* Cross-browser compatible (Chrome, Opera, Safari, Firefox 3.6+, IE6+).
-* Designed with progressive enhancement in mind.
-* CSS normalizations and common bug fixes.
-* IE-specific classes for easier cross-browser control.
-* A default print stylesheet, performance optimized.
-* Mobile browser optimizations.
-* Protection against any stray `console.log` causing JavaScript errors in IE6/7.
-* The latest jQuery via CDN, with a local fallback.
-* A custom Modernizr build for feature detection.
-* An optimized Google Analytics snippet.
-* Apache server caching, compression, and other configuration defaults for Grade-A performance.
-* Cross-domain Ajax and Flash.
-* "Delete-key friendly." Easy to strip out parts you don't need.
-* Extensive inline and accompanying documentation.
+##### [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/)
 
+##### [Twitter Bootstrap](http://twitter.github.com/bootstrap/index.html)
 
+##### [HAML Template Engine](http://haml.info/)
 
-#### [Twitter Bootstrap](http://twitter.github.com/bootstrap/index.html)
-* Built for and by nerds
-* 12-column grid
-* Responsive design
-* Custom jQuery plugins
-* Cross-everything
-
-#### [Ruby on Rails](http://rubyonrails.org/)
+##### [Ruby on Rails](http://rubyonrails.org/)
 * Security Authentication system
 * Users CRUD
 
