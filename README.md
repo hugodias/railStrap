@@ -13,6 +13,8 @@ sh install.sh
 
 Check at [http://localhost:3000](http://localhost:3000)
 
+You can try loggin in with `administrator@railstrap.com / 123123`
+
 ## Features
 
 #### [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/)
