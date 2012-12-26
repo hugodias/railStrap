@@ -40,6 +40,12 @@ class UsersController < ApplicationController
   
   def home
     @user = User.new
+
+    if current_user
+      render "welcome"
+    else
+      render "home"
+    end
   end 
 
   def edit
