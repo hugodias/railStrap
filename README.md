@@ -23,7 +23,7 @@ You can try loggin in with `administrator@railstrap.com / 123123`
 
 ##### [HAML Template Engine](http://haml.info/)
 
-##### [Ruby on Rails](http://rubyonrails.org/)
+##### [Ruby on Rails 3.2](http://rubyonrails.org/)
 * Security Authentication system
 * Users CRUD
 
