@@ -1,0 +1,8 @@
+.row
+	.hero-unit
+		.row-fluid
+			.span12
+				%h3
+					Hello #{current_user.email}
+				%hr
+				%h4= link_to "Manage users", users_path

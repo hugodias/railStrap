@@ -9,6 +9,8 @@ gem 'sqlite3'
 
 gem 'json'
 
+gem 'haml-rails'
+
 gem "bcrypt-ruby", :require => "bcrypt"
 
 # Gems used only for assets and not required

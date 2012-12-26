@@ -1,5 +1,0 @@
-<%= form_tag sessions_path, :class => 'form-horizontal' do %>
-  <p><%= text_field_tag :email, params[:email], :placeholder => 'Email' %></p>
-  <p><%= password_field_tag :password, nil, :placeholder => 'Password' %></p>
-  <p class="button"><%= submit_tag "Log in", :class => 'btn btn-primary' %></p>
-<% end %>		
