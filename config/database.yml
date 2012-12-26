@@ -2,7 +2,7 @@ development:
   adapter: sqlite3
   encoding: utf8
   reconnect: false
-  database: railstrap_development
+  database: db/railstrap_development.sqlite3
   pool: 5
   username: root
   password:
@@ -14,7 +14,7 @@ test:
   adapter: sqlite3
   encoding: utf8
   reconnect: false
-  database: railstrap_test
+  database: db/railstrap_test.sqlite3
   pool: 5
   username: root
   password:
@@ -23,7 +23,7 @@ production:
   adapter: sqlite3
   encoding: utf8
   reconnect: false
-  database: railstrap_production
+  database: db/railstrap_production.sqlite3
   pool: 5
   username: root
   password:
