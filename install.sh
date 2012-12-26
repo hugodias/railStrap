@@ -13,6 +13,9 @@ rake db:migrate
 echo '... Creating default admin user ... '
 rake db:seed
 
-echo '... Database created. Starting server ... '
-rails s
+echo '... Database created... '
+echo
+echo 'To start your server run: rails s'
+echo
+echo '... FINISH! ...'
 
