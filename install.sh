@@ -3,8 +3,8 @@ echo 'Welcome to RailsStrap v0.2 install'
 echo 
 echo
 
-echo '... Updating your bundle ...'
-bundle install
+echo '... Updating your bundle in development environment ...'
+bundle install --without production
 
 echo '... Creating your database ...'
 rake db:create
