@@ -16,6 +16,11 @@ Go to your railStrap folder and run install
 sh install.sh
 </pre>
 
+Then run your server
+<pre>
+rails s
+</pre>
+
 Check at [http://localhost:3000](http://localhost:3000)
 
 You can try loggin in with `administrator@railstrap.com / 123123`
