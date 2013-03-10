@@ -38,6 +38,12 @@ You can try loggin in with `administrator@railstrap.com / 123123`
 * Users CRUD
 
 
+### Databases support
+
+* SQLite (Default)
+* Postgresdb [https://github.com/hugodias/railStrap/tree/postgresdb](https://github.com/hugodias/railStrap/tree/postgresdb)
+
+
 ### Best pratices
 ---
 Change the cookie secret token at
