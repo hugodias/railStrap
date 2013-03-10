@@ -5,12 +5,6 @@ gem 'rails', '3.2.10' # Important security bug fixed in this version
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem "pg", :group => :production
-
-group :development, :test do
-  gem "sqlite3"
-end
-
 gem 'thin'
 
 gem 'json'
@@ -32,6 +26,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+gem 'execjs'
+gem 'therubyracer'
+gem 'pg'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
