@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.10' # Important security bug fixed in this version
+gem 'rails', '4.0.0rc2' # Release Candidate 2
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'journey', :git => 'git://github.com/rails/journey.git'
+gem 'arel'
+gem 'activerecord-deprecated_finders', git: 'git://github.com/rails/activerecord-deprecated_finders.git'
 
 gem "pg", :group => :production
 
@@ -11,9 +12,9 @@ group :development, :test do
   gem "sqlite3"
 end
 
-gem 'thin'
-
 gem 'json'
+
+gem 'thin'
 
 gem 'haml-rails'
 
@@ -22,28 +23,13 @@ gem "bcrypt-ruby", :require => "bcrypt"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sprockets-rails'
+  gem 'sass-rails', :git => 'git://github.com/rails/sass-rails.git'
+  gem 'coffee-rails', :git => 'git://github.com/rails/coffee-rails.git'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  # gem 'therubyracer', platforms: :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '1.0.3'
 end
 
 gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug'
