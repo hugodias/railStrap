@@ -14,6 +14,8 @@ end
 
 gem 'json'
 
+gem 'protected_attributes'
+
 gem 'thin'
 
 gem 'haml-rails'
