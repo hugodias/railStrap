@@ -1,5 +1,3 @@
-###### DEMO
-
 [![Build Status](https://api.travis-ci.org/hugodias/railStrap.png)](https://travis-ci.org/hugodias/railStrap)
 
 # RailStrap
