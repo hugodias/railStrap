@@ -1,13 +1,14 @@
 source 'https://rubygems.org'
 
 ruby "2.0.0"
-
-gem 'rails', '4.0.0rc2' # Release Candidate 2
+gem 'rails', '4.0.0'
 
 gem 'journey', :git => 'git://github.com/rails/journey.git'
 gem 'arel'
 gem 'activerecord-deprecated_finders', git: 'git://github.com/rails/activerecord-deprecated_finders.git'
 
+
+# ORM
 gem "pg", :group => :production
 
 group :development, :test do
@@ -16,10 +17,13 @@ end
 
 gem 'json'
 
+# For using protected attributes
 gem 'protected_attributes'
 
+# Server
 gem 'thin'
 
+# Template Engine
 gem 'haml-rails'
 
 gem "bcrypt-ruby", :require => "bcrypt"
