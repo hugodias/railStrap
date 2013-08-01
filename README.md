@@ -3,7 +3,7 @@
 
 [Demo](http://railstrap03.herokuapp.com/)
 
-RailStrap is a Front-end / Back-end template using HTML5 Boilerplate, Twitter Bootstrap, Ruby on Rails (4.0.0) and Ruby 2.0.0 with a powerful authentication system for building ruby on rails websites in seconds.
+RailStrap is a Front-end / Back-end template using HTML5 Boilerplate, Twitter Bootstrap 3, Ruby on Rails (4.0.0) and Ruby 2.0.0 with a powerful authentication system for building ruby on rails websites in seconds.
 
 ## Quick start
 
@@ -27,7 +27,7 @@ You can try loggin in with `administrator@railstrap.com / 123123`
 
 ##### [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/)
 
-##### [Twitter Bootstrap](http://twitter.github.com/bootstrap/index.html)
+##### [Twitter Bootstrap 3](http://twitter.github.com/bootstrap/index.html)
 
 ##### [HAML Template Engine](http://haml.info/)
 
