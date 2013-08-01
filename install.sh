@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Welcome to RailsStrap v0.2 install'
+echo 'Welcome to RailsStrap v0.3 install'
 echo 
 echo
 
