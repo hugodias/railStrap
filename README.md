@@ -1,7 +1,7 @@
 [![Build Status](https://api.travis-ci.org/hugodias/railStrap.png)](https://travis-ci.org/hugodias/railStrap)
 # RailStrap
 
-[http://railstrap03.herokuapp.com/](Demo)
+[Demo](http://railstrap03.herokuapp.com/)
 
 RailStrap is a Front-end / Back-end template using HTML5 Boilerplate, Twitter Bootstrap, Ruby on Rails (4.0.0) and Ruby 2.0.0 with a powerful authentication system for building ruby on rails websites in seconds.
 
