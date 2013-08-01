@@ -1,51 +1,17 @@
 .row
-  .hero-unit
-    .row-fluid
-      .span8
-        - if current_user
-          %h3
-            Hello #{current_user.email}
-        - else
-          %h1
-            = RailStrap::Application.config.application_name
-        %hr
-          - if current_user
-            %h4= link_to "Manage users", users_path
-          - else
-            %h3 Features
-            %ul
-              %li
-                %strong Front-end
-                %ul
-                  %li
-                    %i.icon-ok
-                    %a{:href => "http://html5boilerplate.com/", :target => "_blank"} HTML5 Boilerplate
-                  %li
-                    %i.icon-ok
-                    %a{:href => "http://twitter.github.com/bootstrap/", :target => "_blank"} Twitter Bootsrap 2.2
-                  %li
-                    %i.icon-ok
-                    %a{:href => "http://haml.info/", :target => "_blank"} HAML Template Engine
-              %li
-                %strong Back-end
-                %ul
-                  %li
-                    %i.icon-ok
-                    %a{:href => "http://rubyonrails.org/", :target => "_blank"} Ruby on Rails
-                    3.2.x
-                  %li
-                    %i.icon-ok
-                    Authentication System
-      .span4
-        - unless current_user
-          .tabbable
-            %ul.nav.nav-tabs
-              %li.active
-                %a{"data-toggle" => "tab", :href => "#tab1"} Log in
-              %li
-                %a{"data-toggle" => "tab", :href => "#tab2"} Sign up
-            .tab-content
-              #tab1.tab-pane.active
-                = render "sessions/form"
-              #tab2.tab-pane
-                = render :partial => "form", :locals => { :user => @user }
+  .col-12.col-sm-12.col-lg-4.col-offset-4
+    %h2.center= RailStrap::Application.config.application_name
+    %hr
+    .tabbable
+      %ul.nav.nav-tabs
+        %li.active
+          %a{"data-toggle" => "tab", :href => "#tab1"} Log in
+        %li
+          %a{"data-toggle" => "tab", :href => "#tab2"} Sign up
+      .tab-content
+        #tab1.tab-pane.active
+          .panel
+            = render "sessions/form"
+        #tab2.tab-pane
+          .panel
+            = render :partial => "form", :locals => { :user => @user }

@@ -1,4 +1,9 @@
-= form_tag sessions_path, :class => 'form-horizontal' do
-  %p= text_field_tag :email, params[:email], :placeholder => 'Email or Username'
-  %p= password_field_tag :password, nil, :placeholder => 'Password'
-  %p.button= submit_tag "Log in", :class => 'btn btn-primary'
+= form_tag sessions_path, :class => '' do
+	%div.form-group
+		= label_tag :email
+		= text_field_tag :email, params[:email], :placeholder => 'Email or Username', :class => 'form-control'
+
+	%div.form-group
+		= label_tag :password
+		= password_field_tag :password, nil, :placeholder => 'Password', :class => 'form-control'
+	%p.button= submit_tag "Log in", :class => 'btn btn-primary'

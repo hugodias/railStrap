@@ -2,4 +2,4 @@
 
 # All RailStrap preferences are here.
 
-RailStrap::Application.config.application_name = 'RailStrap v0.2'
+RailStrap::Application.config.application_name = 'RailStrap v0.3'

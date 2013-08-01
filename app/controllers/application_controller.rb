@@ -1,18 +1,18 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
-  helper_method :current_user
-  before_filter :require_login
-  
-  private
-  
-  def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
-  end
+	protect_from_forgery
+	helper_method :current_user
+	before_filter :require_login
+
+	private
+
+	def current_user
+		@current_user ||= User.find(session[:user_id]) if session[:user_id]
+	end
 
 	def require_login
 		unless logged_in?
-		  flash[:error] = "You must be logged in to access this section"
-		  redirect_to log_in_url
+			flash[:error] = "You must be logged in to access this section"
+			redirect_to log_in_url
 		end
 	end
 
@@ -24,6 +24,6 @@ class ApplicationController < ActionController::Base
 	# really mean to convert something into true or false.
 	def logged_in?
 		!!current_user
-	end  
+	end
 
 end
