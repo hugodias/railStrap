@@ -5,7 +5,7 @@ gem 'rails', '4.0.0'
 
 gem 'journey', :git => 'git://github.com/rails/journey.git'
 gem 'arel'
-gem 'activerecord-deprecated_finders', git: 'git://github.com/rails/activerecord-deprecated_finders.git'
+gem 'activerecord-deprecated_finders', :git => 'git://github.com/rails/activerecord-deprecated_finders.git'
 
 
 # ORM
