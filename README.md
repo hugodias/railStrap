@@ -1,5 +1,5 @@
 [![Build Status](https://api.travis-ci.org/hugodias/railStrap.png)](https://travis-ci.org/hugodias/railStrap)
-# RailStrap
+# RailStrap v0.3
 
 [Demo](http://railstrap03.herokuapp.com/)
 
