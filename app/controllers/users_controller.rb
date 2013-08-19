@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_filter :require_login, :only => [:new, :create, :home]
+  skip_before_filter :require_login, :only => [:new, :create, :home, :login]
   def new
     @user = User.new
   end
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
       end
     end
   end
-  
+
 
   def create
     @user = User.new(params[:user])
@@ -37,16 +37,17 @@ class UsersController < ApplicationController
       render "new"
     end
   end
-  
+
   def home
     @user = User.new
-
     if current_user
       render "welcome"
+    elsif cookies.signed[:user_id]
+      redirect_to log_in_path
     else
       render "home"
     end
-  end 
+  end
 
   def edit
     @user = User.find(params[:id])
@@ -63,7 +64,7 @@ class UsersController < ApplicationController
       else
         format.html  { render :action => "edit" }
         format.json  { render :json => @user.errors,
-                      :status => :unprocessable_entity }        
+                      :status => :unprocessable_entity }
       end
     end
   end
@@ -73,12 +74,12 @@ class UsersController < ApplicationController
       redirect_to users_path, :notice => "You cant delete yourself !"
     else
       @user = User.find(params[:id])
-      @user.delete      
+      @user.delete
 
       respond_to do |format|
         format.html { redirect_to users_path, :notice => 'User deleted' }
         format.json { head :no_content }
-      end      
+      end
     end
   end
 end

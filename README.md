@@ -1,5 +1,5 @@
 [![Build Status](https://api.travis-ci.org/hugodias/railStrap.png)](https://travis-ci.org/hugodias/railStrap)
-# RailStrap v0.3
+# RailStrap v0.3.1
 
 [Demo](http://railstrap03.herokuapp.com/)
 
@@ -33,6 +33,7 @@ You can try loggin in with `administrator@railstrap.com / 123123`
 
 ##### [Ruby on Rails 4.0.0](http://rubyonrails.org/)
 * Security Authentication system
+* Remember me
 * Users CRUD
 
 
