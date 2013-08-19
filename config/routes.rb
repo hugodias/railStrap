@@ -3,12 +3,13 @@ RailStrap::Application.routes.draw do
   root :to => "users#home"
 
   get "log_out" => "sessions#destroy", :as => "log_out"
-  get "log_in" => "sessions#new", :as => "log_in"
-  post "sessions" => "sessions#create"
+  get "log_in" => "sessions#login", :as => "log_in"
+  post "auth" => "sessions#login"
+
   get "sign_up" => "users#new", :as => "sign_up"
-  
+
   resources :users
-  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

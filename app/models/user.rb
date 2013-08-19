@@ -1,18 +1,18 @@
 class User < ActiveRecord::Base
   attr_accessible :username, :email, :password, :password_confirmation
-  
+
   attr_accessor :password
   before_save :encrypt_password
-  
+
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create
   validates_presence_of :username
   validates_presence_of :email
   validates_uniqueness_of :email
   validates_uniqueness_of :username
-  
+
   def self.authenticate(email, password)
-      
+
     user = User.is_a_valid_email(email) ? find_by_email(email) : find_by_username(email)
 
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
@@ -21,7 +21,15 @@ class User < ActiveRecord::Base
       nil
     end
   end
-  
+
+  def self.auth_with_cookie(id)
+    user = find_by_id(id)
+    if user
+      user
+    else
+      nil
+    end
+  end
 
   def self.is_a_valid_email(email)
     # Check the number of '@' signs.
