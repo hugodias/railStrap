@@ -1,82 +1,38 @@
-[![Build Status](https://api.travis-ci.org/hugodias/railStrap.png)](https://travis-ci.org/hugodias/railStrap)
-# RailStrap v0.3.1
+# Devise Example for Rails 4.0.0
 
-[Demo](http://railstrap03.herokuapp.com/)
+Example App using devise. http://github.com/plataformatec/devise
 
-RailStrap is a Front-end / Back-end template using HTML5 Boilerplate, Twitter Bootstrap 3, Ruby on Rails (4.0.0) and Ruby 2.0.0 with a powerful authentication system for building ruby on rails websites in seconds.
+## Installation
 
-## Quick start
+Install bundler if you haven't yet:
 
-Clone the git repo - `git clone https://github.com/hugodias/railStrap.git` - or [download it](https://github.com/hugodias/railStrap/zipball/master)
+```
+gem install bundler
+```
 
-Go to your railStrap folder and run install
-<pre>
-sh install.sh
-</pre>
+Install the gems:
 
-Then run your server
-<pre>
-rails s
-</pre>
+```
+bundle install
+```
 
-Check at [http://localhost:3000](http://localhost:3000)
+This will install Rails 4.0.0, sqlite3 gem and Devise.
 
-You can try loggin in with `administrator@railstrap.com / 123123`
+Rake devise setup task:
 
-## Features
+```
+rake devise:setup
+```
 
-##### [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/)
+This will:
 
-##### [Twitter Bootstrap 3](http://twitter.github.com/bootstrap/index.html)
+* drop any existing database
+* create a new database
+* migrate the database
+* create a default user and admin
 
-##### [HAML Template Engine](http://haml.info/)
-
-##### [Ruby on Rails 4.0.0](http://rubyonrails.org/)
-* Security Authentication system
-* Remember me
-* Users CRUD
-
-
-### Databases support
-
-* SQLite (Default)
-* Postgresdb [https://github.com/hugodias/railStrap/tree/postgresdb](https://github.com/hugodias/railStrap/tree/postgresdb)
-
-
-### Best pratices
----
-Change the cookie secret token at
-`config/initializers/secret_token.rb`
-<pre>
-# Be sure to restart your server when you modify this file.
-
-# Your secret key for verifying the integrity of signed cookies.
-# If you change this key, all old signed cookies will become invalid!
-# Make sure the secret is at least 30 characters and all random,
-# no regular words or you'll be exposed to dictionary attacks.
-RailStrap::Application.config.secret_token = 'YOUR-NEW-TOKEN-HERE'
-</pre>
-
-Thanks [pringles](http://news.ycombinator.com/user?id=pringles) for the tip
-
-
-#### Todo
----
-
-* Include supports for redis and mongodb
-* Create a feature to remind the user password
-* Significantly reduce the amount of files from the repository, to be an extension of application and not the entire application.
+Run the server and use the credentials provided by the rake task to sign in and test the application.
 
 ## License
 
-### Major components:
-
-* jQuery: MIT/GPL license
-* Modernizr: MIT/BSD license
-* Normalize.css: Public Domain
-* Twitter bootstrap: [Apache License, Version 2.0 (the "License")](http://www.apache.org/licenses/LICENSE-2.0)
-* Ruby on Rails: MIT license
-
-### Everything else:
-
-The Unlicense (aka: public domain)
+MIT License. Copyright 2010-2013 Plataforma Tecnologia. http://blog.plataformatec.com.br

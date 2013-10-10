@@ -1,0 +1,3 @@
+john:
+  email: john@john.com
+  confirmed_at: <%= 1.hour.ago.to_s(:db) %>
