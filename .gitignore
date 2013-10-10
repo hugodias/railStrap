@@ -19,3 +19,4 @@ db/schema.rb
 railstrap_development
 railstrap_test
 .DS_Store
+.idea/
