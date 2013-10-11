@@ -9,6 +9,8 @@ RailStrap::Application.routes.draw do
   resources :home, only: :index
   resources :admins
 
-  root 'home#index'
+  devise_scope :user do
+    root to: "devise/sessions#new"
+  end
 
 end
