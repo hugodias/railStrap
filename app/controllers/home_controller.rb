@@ -4,8 +4,4 @@ class HomeController < ApplicationController
   def token
   end
 
-  def secret
-
-  end
-
 end
