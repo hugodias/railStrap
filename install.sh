@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Welcome to RailsStrap v0.3 install'
+echo 'Welcome to RailsStrap v0.4 install'
 echo 
 echo
 
@@ -9,9 +9,6 @@ bundle install --without production
 echo '... Creating your database ...'
 rake db:create
 rake db:migrate
-
-echo '... Creating default admin user ... '
-rake db:seed
 
 echo '... Database created... '
 echo

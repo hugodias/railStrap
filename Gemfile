@@ -11,6 +11,9 @@ gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :ref => '49ae
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+gem 'haml'
+gem 'haml-rails', :group => :development
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -26,11 +29,18 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# FontAwesome
+gem 'font-awesome-rails'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+gem 'protected_attributes'
+
+gem 'paperclip', '~> 3.0'
 
 # Twitter Bootstrap 3
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
