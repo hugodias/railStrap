@@ -77,7 +77,7 @@ To install this server just follow this steps:
 * Download the server image here: [link](https://mega.co.nz/#!Fsd0Tbrb!Ud68qgxpD9Av8VxdrVNPtCWciyh_DosXCopDWJksg4M
 )
 * Place the image that you downloaded in railStrap repository
-* In railStrap directory run `vagrant box add railStrapMachine package.box virtualbox`
+* In railStrap directory run `vagrant box add railStrapMachine ubuntuRails4Ruby2.box virtualbox`
 * Run `vagrant box list` and this new machine should be in that list
 * Now in `Vagrantfile` change `config.vm.box="precise32"` to `config.vm.box="railStrapMachine"`
 * To get your machine up run `vagrant up`
