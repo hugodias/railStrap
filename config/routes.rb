@@ -1,5 +1,7 @@
 RailStrap::Application.routes.draw do
 
+
+
   devise_for :users, :controllers => { :registrations => :registrations }
   devise_for :admins
 
@@ -9,8 +11,8 @@ RailStrap::Application.routes.draw do
 
   get '/dashboard' => 'dashboard#index', as: :dashboard
 
-  get ':username', to: 'users#show', as: :user_profile
-
+  get '/u/:username' =>  'users#show', as: :user_profile
+ 
   resources :home, only: :index
   resources :admins
 
