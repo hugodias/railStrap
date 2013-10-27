@@ -16,6 +16,6 @@ class User < ActiveRecord::Base
     end
 
     def format_username
-    	self.username = self.username.gsub(".","").gsub(/\s+/,"")
+      self.username = self.username.gsub(".","").gsub(/\s+/,"")
     end
 end
