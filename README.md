@@ -23,6 +23,16 @@ Check at [http://localhost:3000](http://localhost:3000)
 
 You can try loggin in with `administrator@railstrap.com / 123123`
 
+
+
+## Requirements
+
+* Rails 4
+* Ruby 2.0.0
+* Imagemagick (For uploading pictures)
+* Vagrant (Optional)
+
+
 ## Features
 
 ##### [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/)
