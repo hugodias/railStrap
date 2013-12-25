@@ -1,9 +1,9 @@
 [![Build Status](https://api.travis-ci.org/hugodias/railStrap.png)](https://travis-ci.org/hugodias/railStrap)
-# RailStrap v0.3.1
+# RailStrap v4
 
 [Demo](http://railstrap03.herokuapp.com/)
 
-RailStrap is a Front-end / Back-end template using HTML5 Boilerplate, Twitter Bootstrap 3, Ruby on Rails (4.0.0) and Ruby 2.0.0 with a powerful authentication system for building ruby on rails websites in seconds.
+RailStrap is a Front-end / Back-end template using HTML5 Boilerplate, Twitter Bootstrap 3, Ruby on Rails (4.0.0) Devise ( Auth ) and Ruby 2.0.0.
 
 ## Quick start
 
@@ -22,6 +22,16 @@ rails s
 Check at [http://localhost:3000](http://localhost:3000)
 
 You can try loggin in with `administrator@railstrap.com / 123123`
+
+
+
+## Requirements
+
+* Rails 4
+* Ruby 2.0.0
+* Imagemagick (For uploading pictures)
+* Vagrant (Optional)
+
 
 ## Features
 
@@ -60,12 +70,31 @@ RailStrap::Application.config.secret_token = 'YOUR-NEW-TOKEN-HERE'
 Thanks [pringles](http://news.ycombinator.com/user?id=pringles) for the tip
 
 
-#### Todo
+#### Vagrant
 ---
+RailStrap has a *Vagrant* file to create your own Virtual Machine for development.
 
-* Include supports for redis and mongodb
-* Create a feature to remind the user password
-* Significantly reduce the amount of files from the repository, to be an extension of application and not the entire application.
+To get started you need to have [Vagrant](http://www.vagrantup.com) and [Virtal Box](https://www.virtualbox.org/) instaled.
+
+After that you just need to start your VM:
+<pre>vagrant up</pre>
+
+##### Bonus
+After that you have a Ubuntu server to work, but this server isn't configured to work with rails yet! :( So i'm leaving here one virtual box image with Ruby 2.0.0 (rbenv) and Rails 4 pre-configured.
+
+To install this server just follow this steps:
+
+* Download the server image here: [link](https://mega.co.nz/#!Fsd0Tbrb!Ud68qgxpD9Av8VxdrVNPtCWciyh_DosXCopDWJksg4M
+)
+* Place the image that you downloaded in railStrap repository
+* In railStrap directory run `vagrant box add railStrapMachine ubuntuRails4Ruby2.box virtualbox`
+* Run `vagrant box list` and this new machine should be in that list
+* Now in `Vagrantfile` change `config.vm.box="precise32"` to `config.vm.box="railStrapMachine"`
+* To get your machine up run `vagrant up`
+
+And its done ! Your vagrant vm now has Ruby 2.0.0 and Rails 4 ready to go.
+
+---
 
 ## License
 

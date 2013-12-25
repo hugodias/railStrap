@@ -1,55 +1,20 @@
 class User < ActiveRecord::Base
-  attr_accessible :username, :email, :password, :password_confirmation
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "http://lorempixel.com/1000/1200/abstract"
 
-  attr_accessor :password
-  before_save :encrypt_password
+  before_create :set_username
+  # Remove dots and spaces from username
+  before_save :format_username
 
-  validates_confirmation_of :password
-  validates_presence_of :password, :on => :create
-  validates_presence_of :username
-  validates_presence_of :email
-  validates_uniqueness_of :email
-  validates_uniqueness_of :username
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable,
+         :token_authenticatable, :lockable
 
-  def self.authenticate(email, password)
-
-    user = User.is_a_valid_email(email) ? find_by_email(email) : find_by_username(email)
-
-    if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
-      user
-    else
-      nil
+  private
+    def set_username
+      self.username = self.email[/^[^@]+/].gsub(".","")
     end
-  end
 
-  def self.auth_with_cookie(id)
-    user = find_by_id(id)
-    if user
-      user
-    else
-      nil
+    def format_username
+      self.username = self.username.gsub(".","").gsub(/\s+/,"") unless self.username.nil?
     end
-  end
-
-  def self.is_a_valid_email(email)
-    # Check the number of '@' signs.
-    if email.count("@") != 1 then
-      return false
-
-    # We can now check the email using a simple regex.
-    # You can replace the TLD's at the end with the TLD's you wish
-    # to accept.
-    elsif email =~ /^.*@.*(.com|.org|.net)$/ then
-      return true
-    else
-      return false
-    end
-  end
-
-  def encrypt_password
-    if password.present?
-      self.password_salt = BCrypt::Engine.generate_salt
-      self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
-    end
-  end
 end

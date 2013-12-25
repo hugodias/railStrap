@@ -20,3 +20,7 @@ railstrap_development
 railstrap_test
 .DS_Store
 .idea/
+.vagrant/
+public/
+*.swp
+.vagrant/machines/default/virtualbox/id
