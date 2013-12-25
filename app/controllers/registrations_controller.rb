@@ -3,12 +3,12 @@ class RegistrationsController < Devise::RegistrationsController
     @user = User.find(current_user.id)
 
     successfully_updated = if needs_password?(@user, params)
-                             @user.update_with_password(params[:user])
+                             @user.update_with_password(user_params)
                            else
                              # remove the virtual current_password attribute update_without_password
                              # doesn't know how to ignore it
                              params[:user].delete(:current_password)
-                             @user.update_without_password(params[:user])
+                             @user.update_without_password(user_params)
                            end
 
     if successfully_updated
@@ -31,4 +31,13 @@ class RegistrationsController < Devise::RegistrationsController
         params[:user][:password].present? ||
         user.username != params[:user][:username]
   end
+
+  # Using a private method to encapsulate the permissible parameters is
+  # just a good pattern since you'll be able to reuse the same permit
+  # list between create and update. Also, you can specialize this method
+  # with per-user checking of permissible attributes.
+  def user_params
+    params.require(:user).permit(:avatar, :email, :current_password, :password, :password_confirmation, :username)
+  end
+
 end

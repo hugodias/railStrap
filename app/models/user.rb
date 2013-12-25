@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :avatar, :email, :password, :password_confirmation, :username
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "images/:style/missing.png"
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "http://lorempixel.com/1000/1200/abstract"
 
   before_create :set_username
   # Remove dots and spaces from username
