@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "http://lorempixel.com/1000/1200/abstract"
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "http://placehold.it/450"
 
   before_create :set_username
   # Remove dots and spaces from username

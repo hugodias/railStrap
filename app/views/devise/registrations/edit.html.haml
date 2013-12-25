@@ -17,7 +17,7 @@
       %div.form-group.well
         .row
           .col-md-3
-            = image_tag current_user.avatar.url(:thumb)
+            = image_tag current_user.avatar.url(:thumb), :style => 'width: 100%'
           .col-md-9
             = f.label :avatar
             = f.file_field :avatar
