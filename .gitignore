@@ -24,3 +24,4 @@ railstrap_test
 public/
 *.swp
 .vagrant/machines/default/virtualbox/id
+public/system
