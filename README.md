@@ -1,4 +1,3 @@
-[![Build Status](https://api.travis-ci.org/hugodias/railStrap.png)](https://travis-ci.org/hugodias/railStrap)
 # RailStrap v4
 
 [Demo](http://railstrap03.herokuapp.com/)
@@ -7,12 +6,11 @@ RailStrap is a Front-end / Back-end template using HTML5 Boilerplate, Twitter Bo
 
 ## Quick start
 
-Clone the git repo - `git clone https://github.com/hugodias/railStrap.git` - or [download it](https://github.com/hugodias/railStrap/zipball/master)
+* Clone the git repo - `git clone https://github.com/hugodias/railStrap.git` - or [download it](https://github.com/hugodias/railStrap/zipball/master)
 
-Go to your railStrap folder and run install
-<pre>
-sh install.sh
-</pre>
+* Run `bundle install`
+* Run `rake db:migrate`
+
 
 Then run your server
 <pre>
@@ -20,10 +18,6 @@ rails s
 </pre>
 
 Check at [http://localhost:3000](http://localhost:3000)
-
-You can try loggin in with `administrator@railstrap.com / 123123`
-
-
 
 ## Requirements
 
@@ -42,9 +36,8 @@ You can try loggin in with `administrator@railstrap.com / 123123`
 ##### [HAML Template Engine](http://haml.info/)
 
 ##### [Ruby on Rails 4.0.0](http://rubyonrails.org/)
-* Security Authentication system
-* Remember me
-* Users CRUD
+* Devise
+* Paperclip ( User profile picture )
 
 
 ### Databases support
