@@ -1,0 +1,22 @@
+<nav class="navbar navbar-fixed-top navbar-dark bg-primary">
+  <%= link_to "CakeStrap", root_path, class: "navbar-brand" %>
+  <ul class="nav navbar-nav">
+    <li class="nav-item active">
+      <%= link_to t('.home'), root_path, class: "nav-link" %>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav pull-xs-right">
+    <% if signed_in? %>
+      <li class="nav-item">
+        <%= link_to t('.account'), edit_profile_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to t('.sign_out'), sign_out_path, method: :delete, class: "btn btn-success-outline nav-link pull-xs-right" %>
+      </li>
+    <% else %>
+      <li class="nav-item">
+        <%= link_to t('.sign_in'), sign_in_path, class: "nav-link" %>
+      </li>
+    <% end %>
+  </ul>
+</nav>

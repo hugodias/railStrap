@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <%= render_profile_for(@user, 400) %>
+      <div class="card-block">
+        <h4 class="card-title"><%= @user.name %> </h4>
+        <p class="card-text"><%= @user.profile.description %></p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <%= t('.signed_in_at_html', created_at: l(@user.created_at, :format => :short)) %>
+        </li>
+        <% if @user.admin? %>
+          <li class="list-group-item bg-primary">
+            <%= t(".is_admin") %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-8">
+    <h4><%= t('.title') %></h4>
+    <br>
+    <%= simple_form_for @user, url: update_profile_path do |form| %>
+
+      <%= form.input :email %>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <%= form.input :first_name %>
+        </div>
+        <div class="col-sm-6">
+          <%= form.input :last_name %>
+        </div>
+      </div>
+
+
+
+      <%= form.simple_fields_for :profile do |profile| %>
+        <%= profile.input :description %>
+      <% end %>
+
+      <%= form.button :submit, "Save profile", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+

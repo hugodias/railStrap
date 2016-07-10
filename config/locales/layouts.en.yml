@@ -1,0 +1,8 @@
+en:
+  layouts:
+    partials:
+      navigation:
+        home: Home
+        account: Account
+        sign_in: Sign in
+        sign_out: Sign out

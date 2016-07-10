@@ -1,16 +1,12 @@
+require "application_responder"
+
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
-  before_filter :configure_permitted_parameters, if: :devise_controller?
+  self.responder = ApplicationResponder
+  respond_to :html
 
-  protected
+  include Clearance::Controller
+  include Pundit
+  before_action :require_login
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit! }
-  end
-
-
-
-
+  protect_from_forgery
 end

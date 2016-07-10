@@ -1,23 +1,17 @@
-RailStrap::Application.routes.draw do
+Rails.application.routes.draw do
 
+  constraints Clearance::Constraints::SignedIn.new { |user| user.admin? } do
+    root to: "admin/dashboards#index", as: :admin_root
+  end
 
+  constraints Clearance::Constraints::SignedIn.new do
+    root to: "dashboards#index", as: :signed_in_root
 
-  devise_for :users, :controllers => { :registrations => :registrations }
-  devise_for :admins
+    get "me", to: "profiles#edit", as: "edit_profile"
+    match "me", to: "profiles#update", as: "update_profile", via: [:patch]
+  end
 
-  get '/token' => 'home#token', as: :token
-
-  get '/admins/manage' => 'admins#manage', as: :manage
-
-  get '/dashboard' => 'dashboard#index', as: :dashboard
-
-  get '/u/:username' =>  'users#show', as: :user_profile
- 
-  resources :home, only: :index
-  resources :admins
-
-  root to: "dashboard#index"
-
-
-
+  constraints Clearance::Constraints::SignedOut.new do
+    root to: "pages#index"
+  end
 end

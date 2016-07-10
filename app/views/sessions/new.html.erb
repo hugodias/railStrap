@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-4">
+    <div id="clearance" class="sign-in">
+      <div class="card">
+        <div class="card-block">
+          <h4 class="card-title"><%= t(".title") %></h4>
+          <%= render partial: '/sessions/form' %>
+        </div>
+        <div class="card-footer">
+          <%= link_to t(".forgot_password"), new_password_path %>
+          <% if Clearance.configuration.allow_sign_up? %>
+          <%= link_to t(".sign_up"), sign_up_path, class: "pull-xs-right" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+en:
+  profiles:
+    edit:
+      title: Update your profile
+      is_admin: Admin
+      signed_in_at_html: Signed in at <strong>%{created_at}</strong>

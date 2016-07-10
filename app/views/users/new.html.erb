@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-4">
+    <div id="clearance" class="sign-in">
+      <div class="card">
+        <div class="card-block">
+          <h4 class="card-title"><%= t(".title") %></h4>
+
+          <%= simple_form_for @user do |form| %>
+          <%= form.input :email %>
+          <%= form.input :password %>
+
+          <%= form.button :submit, class: "btn btn-primary" %>
+          </div>
+          <div class="card-footer">
+            <%= link_to t(".sign_in"), sign_in_path %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

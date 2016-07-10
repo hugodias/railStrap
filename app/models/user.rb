@@ -1,20 +1,14 @@
-class User < ActiveRecord::Base
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "http://placehold.it/450"
+class User < ApplicationRecord
+  include Clearance::User
 
-  before_create :set_username
-  # Remove dots and spaces from username
-  before_save :format_username
+  has_one :profile, dependent: :destroy
 
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable,
-         :token_authenticatable, :lockable
+  accepts_nested_attributes_for :profile
 
-  private
-    def set_username
-      self.username = self.email[/^[^@]+/].gsub(".","")
-    end
+  before_create :build_profile
 
-    def format_username
-      self.username = self.username.gsub(".","").gsub(/\s+/,"") unless self.username.nil?
-    end
+  def name
+    (first_name.present? or last_name.present?) ? "#{first_name} #{last_name}" : email
+  end
+
 end
