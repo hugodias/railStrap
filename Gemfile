@@ -9,6 +9,7 @@ gem "responders"
 gem "clearance"
 gem "carrierwave"
 gem "pundit"
+gem "good_services"
 
 ##
 # Front-end Helpers

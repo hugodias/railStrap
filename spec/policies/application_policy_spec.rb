@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe ApplicationPolicy do
+describe ApplicationPolicy, type: :policy do
 
   subject { described_class }
 
