@@ -25,6 +25,15 @@ Check at [http://localhost:3000](http://localhost:3000)
 * Imagemagick (For uploading pictures)
 
 ## Features
+* Sign up
+* Sign in
+* Remember password
+* User profile (update profile, change picture)
+* Authorization (Admin | User)
+* Dashboards
+* Create/Update/Delete user crud for admins
+
+## Technologies
 
 ### Back-end
 * Ruby on Rails 5
