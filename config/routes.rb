@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-
   constraints Clearance::Constraints::SignedIn.new { |user| user.admin? } do
     root to: "admin/dashboards#index", as: :admin_root
+
+    namespace :admin do
+      resource :users
+    end
   end
 
   constraints Clearance::Constraints::SignedIn.new do

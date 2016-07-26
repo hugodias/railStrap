@@ -4,3 +4,5 @@ en:
       title: Update your profile
       is_admin: Admin
       signed_in_at_html: Signed in at <strong>%{created_at}</strong>
+      update_password: Change password
+      fill_to_change: Fill a new password bellow if you want to change it

@@ -1,6 +1,17 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/hugo/Projects/railStrap/app/helpers/admin/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/hugo/Projects/railStrap/app/models/admin.rb": [
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
       "/Users/hugo/Projects/railStrap/app/helpers/application_helper.rb": [
         1,
         null
@@ -14,44 +25,19 @@
         null,
         null
       ],
-      "/Users/hugo/Projects/railStrap/app/services/create_user_service.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        5,
-        5,
-        5,
-        null,
-        null,
-        1,
-        5,
-        null,
-        null
-      ],
       "/Users/hugo/Projects/railStrap/app/models/user.rb": [
         1,
         1,
-        null,
         1,
-        null,
-        1,
-        null,
         1,
         null,
         1,
         0,
         null,
-        null,
         null
       ],
       "/Users/hugo/Projects/railStrap/app/models/application_record.rb": [
         1,
-        1,
-        null
-      ],
-      "/Users/hugo/Projects/railStrap/app/models/profile.rb": [
         1,
         null
       ],
@@ -61,9 +47,45 @@
         0,
         0,
         0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/hugo/Projects/railStrap/app/controllers/admin/users_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0
       ],
       "/Users/hugo/Projects/railStrap/app/controllers/application_controller.rb": [
+        0,
         0,
         0,
         0,
@@ -130,7 +152,22 @@
         0,
         0
       ],
+      "/Users/hugo/Projects/railStrap/app/models/profile.rb": [
+        0,
+        0
+      ],
       "/Users/hugo/Projects/railStrap/app/policies/admin_dashboards_policy.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/hugo/Projects/railStrap/app/policies/admin_users_policy.rb": [
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -217,6 +254,41 @@
         0,
         0
       ],
+      "/Users/hugo/Projects/railStrap/app/services/create_user_service.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/hugo/Projects/railStrap/app/services/update_profile_service.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "/Users/hugo/Projects/railStrap/lib/application_responder.rb": [
         0,
         0,
@@ -228,6 +300,6 @@
         0
       ]
     },
-    "timestamp": 1468540515
+    "timestamp": 1469531214
   }
 }

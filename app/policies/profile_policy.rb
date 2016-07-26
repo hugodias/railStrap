@@ -1,9 +1,9 @@
 class ProfilePolicy < ApplicationPolicy
   def edit?
-    user and user.profile.present?
+    user.present?
   end
 
   def update?
-    user and user.profile.present?
+    user.present?
   end
 end

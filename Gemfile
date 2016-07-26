@@ -24,6 +24,7 @@ gem "bower-rails", "~> 0.10.0"
 group :test do
   gem "simplecov", require: false
   gem "database_cleaner"
+  gem "shoulda-matchers", "~> 3.1"
 end
 
 group :development, :test do
@@ -36,6 +37,7 @@ group :development, :test do
   gem "letter_opener"
   gem "launchy"
   gem "pry-rails"
+  gem "binding_of_caller"
 end
 
 group :development do

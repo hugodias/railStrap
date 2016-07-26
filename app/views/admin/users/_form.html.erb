@@ -1,0 +1,5 @@
+<%= simple_form_for @user, url: admin_users_path do |f| %>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.button :submit %>
+<% end %>

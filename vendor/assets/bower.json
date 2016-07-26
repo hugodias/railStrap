@@ -1,6 +1,7 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
+    "tether": "latest",
     "bootstrap": "git://github.com/twbs/bootstrap#v4-dev",
     "normalize-css": "latest"
   }

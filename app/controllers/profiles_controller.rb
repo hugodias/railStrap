@@ -4,12 +4,12 @@ class ProfilesController < ApplicationController
   respond_to :html
 
   def edit
-    authorize current_user.profile
+    authorize Profile
   end
 
   def update
     authorize Profile
-    @user = User.update(user_params)
+    UpdateProfileService.run(@user, user_params)
     respond_with @user, location: -> { edit_profile_path }
   end
 
@@ -20,7 +20,7 @@ class ProfilesController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, profile_attributes: [:description])
+    params.require(:user).permit(:first_name, :last_name, :email, :password)
   end
 
   def interpolation_options

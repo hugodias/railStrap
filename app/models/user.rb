@@ -1,14 +1,9 @@
 class User < ApplicationRecord
   include Clearance::User
-
-  has_one :profile, dependent: :destroy
-
-  accepts_nested_attributes_for :profile
-
-  before_create :build_profile
+  validates_presence_of :email
+  validates_presence_of :password, on: :create
 
   def name
-    (first_name.present? or last_name.present?) ? "#{first_name} #{last_name}" : email
+    first_name.present? || last_name.present? ? "#{first_name} #{last_name}" : email
   end
-
 end
