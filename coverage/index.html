@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-07-26T08:06:54-03:00">2016-07-26T08:06:54-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-07-30T10:15:01-03:00">2016-07-30T10:15:01-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">5.37%</span></span>
+    (<span class="covered_percent"><span class="red">9.75%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.05
+         0.18
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>23</b> files in total.
-    <b>242</b> relevant lines. 
-    <span class="green"><b>13</b> lines covered</span> and
-    <span class="red"><b>229</b> lines missed </span>
+    <b>236</b> relevant lines. 
+    <span class="green"><b>23</b> lines covered</span> and
+    <span class="red"><b>213</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -252,12 +252,12 @@
       
       <tr>
         <td class="strong"><a href="#bfc662d6b3c6e3e58f4c27df46343bdacc40cab6" class="src_link" title="app/services/create_user_service.rb">app/services/create_user_service.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>16</td>
-        <td>16</td>
+        <td class="green strong">100.0 %</td>
+        <td>17</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
-        <td>16</td>
-        <td>0.0</td>
+        <td>3.0</td>
       </tr>
       
       <tr>
@@ -661,20 +661,20 @@
           <div class="file_list_container" id="Ungrouped">
   <h2>
     <span class="group_name">Ungrouped</span>
-    (<span class="covered_percent"><span class="red">0.0%</span></span>
+    (<span class="covered_percent"><span class="red">9.01%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.0
+         0.27
        </span>
     </span> hits/line)
   </h2>
   <a name="Ungrouped"></a>
   <div>
     <b>8</b> files in total.
-    <b>117</b> relevant lines. 
-    <span class="green"><b>0</b> lines covered</span> and
-    <span class="red"><b>117</b> lines missed </span>
+    <b>111</b> relevant lines. 
+    <span class="green"><b>10</b> lines covered</span> and
+    <span class="red"><b>101</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -752,12 +752,12 @@
       
       <tr>
         <td class="strong"><a href="#bfc662d6b3c6e3e58f4c27df46343bdacc40cab6" class="src_link" title="app/services/create_user_service.rb">app/services/create_user_service.rb</a></td>
-        <td class="red strong">0.0 %</td>
-        <td>16</td>
-        <td>16</td>
+        <td class="green strong">100.0 %</td>
+        <td>17</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
-        <td>16</td>
-        <td>0.0</td>
+        <td>3.0</td>
       </tr>
       
       <tr>
@@ -946,19 +946,19 @@
         <li class="missed" data-hits="0" data-linenumber="13">
           
           
-          <code class="ruby">      @user = User.create(user_params)</code>
+          <code class="ruby">      service = CreateUserService.new(user_params)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="14">
           
           
-          <code class="ruby">      @user.errors.add(:base, :invalid)</code>
+          <code class="ruby">      service.run</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="15">
           
           
-          <code class="ruby">      respond_with @user, location: -&gt; { admin_root_path }</code>
+          <code class="ruby">      respond_with service.record, location: -&gt; { admin_root_path }</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="16">
@@ -2426,108 +2426,114 @@
         <div class="source_table" id="bfc662d6b3c6e3e58f4c27df46343bdacc40cab6">
   <div class="header">
     <h3>app/services/create_user_service.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>16</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>16</b> lines missed.</span>
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
   <pre>
     <ol>
       
-        <li class="missed" data-hits="0" data-linenumber="1">
-          
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
           
           <code class="ruby">class CreateUserService &lt; GoodServices::Base</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="2">
-          
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
           
           <code class="ruby">  rescuable_from ActiveRecord::RecordInvalid</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  attr_reader :email, :password</code>
+          <code class="ruby">  attr_reader :email, :password, :admin</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="4">
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="5">
-          
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
           
           <code class="ruby">  def initialize(params)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="6">
-          
+        <li class="covered" data-hits="5" data-linenumber="6">
+          <span class="hits">5</span>
           
           <code class="ruby">    @email    = params[:email]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
-          
+        <li class="covered" data-hits="5" data-linenumber="7">
+          <span class="hits">5</span>
           
           <code class="ruby">    @password = params[:password]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="8">
+        <li class="covered" data-hits="5" data-linenumber="8">
+          <span class="hits">5</span>
           
+          <code class="ruby">    @admin    = params[:admin]</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="9">
+          <span class="hits">5</span>
           
           <code class="ruby">    @record   = User.new(email: email,</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">                         password: password,</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">                         admin: params[:admin])</code>
+          <code class="ruby">                         admin: admin)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
-          
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
           
           <code class="ruby">  def perform</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
-          
+        <li class="covered" data-hits="5" data-linenumber="15">
+          <span class="hits">5</span>
           
           <code class="ruby">    @record.save!</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">end</code>
@@ -2620,13 +2626,13 @@
         <li class="missed" data-hits="0" data-linenumber="12">
           
           
-          <code class="ruby">    params.delete(:password) if params[:password].empty?</code>
+          <code class="ruby">    params.delete(:password) if params.fetch(:password).empty?</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="13">
           
           
-          <code class="ruby">    user.save!(params)</code>
+          <code class="ruby">    user.update!(params)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="14">

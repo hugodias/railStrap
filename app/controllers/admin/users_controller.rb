@@ -10,9 +10,9 @@ module Admin
 
     def create
       authorize :admin_users, :create?
-      @user = User.create(user_params)
-      @user.errors.add(:base, :invalid)
-      respond_with @user, location: -> { admin_root_path }
+      service = CreateUserService.new(user_params)
+      service.run
+      respond_with service.record, location: -> { admin_root_path }
     end
 
     def update

@@ -25,6 +25,25 @@
         null,
         null
       ],
+      "/Users/hugo/Projects/railStrap/app/services/create_user_service.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        5,
+        5,
+        5,
+        5,
+        null,
+        null,
+        null,
+        null,
+        1,
+        5,
+        null,
+        null
+      ],
       "/Users/hugo/Projects/railStrap/app/models/user.rb": [
         1,
         1,
@@ -254,24 +273,6 @@
         0,
         0
       ],
-      "/Users/hugo/Projects/railStrap/app/services/create_user_service.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "/Users/hugo/Projects/railStrap/app/services/update_profile_service.rb": [
         0,
         0,
@@ -300,6 +301,6 @@
         0
       ]
     },
-    "timestamp": 1469531214
+    "timestamp": 1469884501
   }
 }
