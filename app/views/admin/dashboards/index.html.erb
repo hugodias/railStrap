@@ -1,8 +1,15 @@
-<h1>Admin::Dashboards#index</h1>
-<p>Find me in app/views/admin/dashboards/index.html.erb</p>
+<%= link_to t(".new_user"), new_admin_user_path, class: "btn btn-primary" %>
 
-<%= link_to t(".new_user"), new_admin_users_path, class: "btn btn-primary" %>
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th><%= t(".name") %></th>
+      <th><%= t(".email") %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody id="users">
+    <%= render @users %>
+  </tbody>
+</table>
 
-<ul id="users">
-  <%= render @users %>
-</ul>

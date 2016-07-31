@@ -1,3 +1,5 @@
-<li>
-  <%= user.name %>
-</li>
+<tr>
+  <th scope="row"><%= user.name %></th>
+  <td><%= user.email %></td>
+  <td><%= link_to t(".remove_user"), admin_user_path(user), method: :delete %></td>
+</tr>

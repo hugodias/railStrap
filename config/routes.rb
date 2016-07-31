@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     root to: "admin/dashboards#index", as: :admin_root
 
     namespace :admin do
-      resource :users
+      resources :users
     end
   end
 

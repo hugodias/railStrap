@@ -1,5 +1,6 @@
 module Admin
   class UsersController < ApplicationController
+    before_action :set_user, only: [:update, :destroy]
     respond_to :html
 
     def new
@@ -19,9 +20,14 @@ module Admin
     end
 
     def destroy
+      respond_with @user.destroy, location: -> { admin_root_path } 
     end
 
     private
+
+    def set_user
+      @user = User.find(params[:id])
+    end
 
     def user_params
       params.require(:user).permit(:email, :password)
