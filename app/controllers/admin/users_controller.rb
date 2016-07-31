@@ -12,6 +12,7 @@ module Admin
     def create
       authorize :admin_users, :create?
       service = CreateUserService.new(user_params)
+      service.record.errors.add(:base, :invalid)
       service.run
       respond_with service.record, location: -> { admin_root_path }
     end
@@ -20,7 +21,7 @@ module Admin
     end
 
     def destroy
-      respond_with @user.destroy, location: -> { admin_root_path } 
+      respond_with @user.destroy, location: -> { admin_root_path }
     end
 
     private
